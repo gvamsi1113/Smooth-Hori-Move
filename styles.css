@@ -26,4 +26,18 @@ body {
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
+    border-radius: 3px;
+}
+
+#with-mouse {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+    transform: rotate(45deg);
+    user-select: none;
+    background: bisque;
+    border-radius: 25%;
 }
