@@ -39,5 +39,7 @@ body {
     transform: rotate(45deg);
     user-select: none;
     background: bisque;
+    border: 1px solid;
+    border-color: black;
     border-radius: 25%;
 }
