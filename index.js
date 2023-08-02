@@ -14,10 +14,6 @@ window.onmouseup = e => {
 window.onmousemove = e => {
     const mX = e.clientX;
     const mY = e.clientY;
-    
-    brat.animate({
-        transform: `translate(${mX - 15}px, ${mY - 15}px) rotate(${(mX-mY)*2.5}deg)`
-    }, { duration: 600, fill: "forwards" });
 
     if (track.dataset.mouseDownAt === "0") return;
 
@@ -25,18 +21,16 @@ window.onmousemove = e => {
 
     const nextPercentage = Math.min(Math.max(parseFloat(track.dataset.prevPercentage) + mouseDelta / maxDelta * -100, -84), 0);
 
-    const yDelta = ((e.clientY - window.innerHeight / 2) / window.innerHeight * 100);
-
     track.animate({
-        transform: `translate(${nextPercentage - 8}%, ${yDelta * 1 / 5 - 50}%)`
-    }, { duration: 1200, fill: "forwards" });
+        transform: `translate(${nextPercentage - 8}%, -50%)`
+    }, { duration: 1500, fill: "forwards" });
 
     track.dataset.percentage = nextPercentage;
 
     for (const image of track.getElementsByClassName("image")) {
         image.animate({
             objectPosition: `${nextPercentage + 100}% center`
-        }, { duration: 1200, fill: "forwards" });
+        }, { duration: 1500, fill: "forwards" });
     }
 }
 
