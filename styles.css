@@ -8,35 +8,34 @@ body {
     overflow: hidden;
 }
 
-.trackwrapper {
+.dummy-scroll {
     height: 30vw;
     /* padding: 2vh; */
-    width: 100%;
+    width: 247vw;
     position: absolute;
     top: 50%;
     transform: translate(0%, -50%);
-    background-color: #222;
-    overflow-x: scroll;
+    /* background-color: #222;   */
+    /* overflow-x: scroll; */
 }
 
 #image-track {
-    padding-left: 41vw;
-    padding-right: 41vw;
+    padding-left: 0;
+    padding-right: 1.5vw;
     height: auto;
     display: flex;
-    gap: 3vw;
-    position: inherit;
-    left: 0%;
+    gap: 1.5vw;
+    position: absolute;
+    left: 41vw;
     top: 50%;
     transform: translate(0%, -50%);
     user-select: none;
-    border: 1px solid white;
-    overflow: visible;
+    /* border: 1px solid white; */
 }
 
 #image-track>.card {
     width: 18vw;
-    aspect-ratio: 2/3;
+    aspect-ratio: 7/10;
     border-radius: 4px;
     overflow: hidden;
 }
@@ -74,7 +73,7 @@ body {
 
 .center-plus {
     width: 2px;
-    height: 200px;
+    height: 17.6vw;
     position: absolute;
     left: 50%;
     top: 50%;
