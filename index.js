@@ -9,15 +9,15 @@ window.onmousedown = e => {
 window.onmouseup = e => {
     track.dataset.mouseDownAt = "0";
     track.animate({
-        transform: `translate(${Math.round(track.dataset.percentage/19.5*1.56)*19.5/1.56}%, -50%)`
+        transform: `translate(${Math.round(track.dataset.percentage/19.5*1.545)*19.5/1.545}%, -50%)`
     }, { duration: 800, fill: "forwards" });
     for (const image of track.getElementsByClassName("image")) {
         image.animate({
-            objectPosition: `${Math.round(track.dataset.percentage/19.5*1.56)*19.5/1.56 + 100}% center`
+            objectPosition: `${Math.round(track.dataset.percentage/19.5*1.545)*19.5/1.545 + 100}% center`
         }, { duration: 800, fill: "forwards" });
     }
     
-    track.dataset.prevPercentage = Math.round(track.dataset.percentage/19.5*1.56)*19.5/1.56;
+    track.dataset.prevPercentage = Math.round(track.dataset.percentage/19.5*1.545)*19.5/1.545;
 }
 
 window.onmousemove = e => {
@@ -35,7 +35,7 @@ window.onmousemove = e => {
     // const limitConst = 41+41+7*3+8*18 = 247;  track(paddingLeft + paddingRight) + (number of gaps * width of each gap) + (number of elements * width of each)
     // So for maxDelta movement of mouse the track should move 248 and should not move more than that so limited to that amount.
 
-    const nextPercentage = Math.min(Math.max(parseFloat(track.dataset.prevPercentage) + mouseDelta / maxDelta * -100, -100+19.5*100/156), 0);
+    const nextPercentage = Math.min(Math.max(parseFloat(track.dataset.prevPercentage) + mouseDelta / maxDelta * -100, -100+18*100/154.5), 0);
 
     track.animate({
         transform: `translate(${nextPercentage}%, -50%)`

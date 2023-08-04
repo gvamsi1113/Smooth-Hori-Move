@@ -21,7 +21,7 @@ body {
 
 #image-track {
     padding-left: 0;
-    padding-right: 1.5vw;
+    /* padding-right: 1.5vw; */
     height: auto;
     display: flex;
     gap: 1.5vw;
