@@ -15,7 +15,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translate(0%, -50%);
-    background-color: #222;  
+    background-color: #0e0e0e;  
     /* overflow-x: scroll; */
 }
 
@@ -44,13 +44,19 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    scale: 1;
+    scale: 1.2;
     object-position: 100% bottom;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
+    transition: 300ms linear;
+}
+
+#image-track>.card:hover>.image {
+    scale: 1.1;
+    transition: 300ms linear;
 }
 
 
@@ -73,7 +79,7 @@ body {
 
 .center-plus {
     width: 2px;
-    height: 17.6vw;
+    height: 18px;
     position: absolute;
     left: 50%;
     top: 50%;
