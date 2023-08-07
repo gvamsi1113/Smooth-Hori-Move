@@ -8,29 +8,40 @@ body {
     overflow: hidden;
 }
 
-.dummy-scroll {
+#dummy-scroll {
     height: 30vw;
-    /* padding: 2vh; */
-    width: 247vw;
+    width: 100%;
     position: absolute;
     top: 50%;
     transform: translate(0%, -50%);
-    background-color: #0e0e0e;  
-    /* overflow-x: scroll; */
+    overflow-y: scroll;
+    z-index: 1;
+}
+
+#dummy-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+#inner {
+    height: 60vw;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 #image-track {
-    padding-left: 0;
-    /* padding-right: 1.5vw; */
+    padding: 1.5vw;
     height: auto;
     display: flex;
     gap: 1.5vw;
     position: absolute;
-    left: 41vw;
+    left: 39.5vw;
     top: 50%;
     transform: translate(0%, -50%);
     user-select: none;
-    /* border: 1px solid white; */
 }
 
 #image-track>.card {
@@ -44,7 +55,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    scale: 1.2;
+    scale: 2;
     object-position: 100% bottom;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -55,7 +66,7 @@ body {
 }
 
 #image-track>.card:hover>.image {
-    scale: 1.1;
+    scale: 1.8;
     transition: 300ms linear;
 }
 
